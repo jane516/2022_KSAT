@@ -1,11 +1,10 @@
-import sys
-
 from sympy import *
 from fractions import Fraction
 dic = {(1, 2): Fraction(5, 4)}
 
 
 def IntegrateF(a, b):
+    global dic
     if (a, b) in dic:
         return dic[(a, b)]
     k = a * b + a**2
@@ -29,25 +28,5 @@ def IntegrateAllF(a, b):
         return dic2[a, b]
 
 
-x = symbols('x')
-f = {1: 1}
-g = {}
-k = 0
-
-while 2**k <= 8:
-    a = 2 * f[2 ** k]
-    g[2 ** k] = a
-    k += 1
-    f[2 ** k] = a
-
-
-a, b = map(int, sys.stdin.readline().strip().split())
-A = b * f[b] - a * f[a]
-B = IntegrateAllF(a, b)
-분수 = Fraction(A - B)
-p = 분수.denominator   # 분모
-q = 분수.numerator   # 분자
-print(p + q)
-
-
-
+print(IntegrateAllF(1, 4))
+print(IntegrateAllF(1, 8))
