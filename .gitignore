@@ -282,3 +282,4 @@ cython_debug/
 .idea/Math.iml
 .idea/2022_ksat.iml
 .idea/2022_ksat.iml
+*.iml
