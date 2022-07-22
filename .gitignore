@@ -277,3 +277,8 @@ cython_debug/
 #.idea/
 
 # End of https://www.toptal.com/developers/gitignore/api/python,pycharm
+.idea/.name
+.idea/2022_ksat.iml
+.idea/Math.iml
+.idea/2022_ksat.iml
+.idea/2022_ksat.iml
